@@ -317,7 +317,7 @@ header .welcome {
     background: #cefce9;
     padding: 25px;
     border-radius: 12px;
-    border-bottom: 4px solid #00ff88; /* 呼應 3D 草履蟲的顏色 */
+    border-bottom: 4px solid #00ff88; 
     transition: all 0.3s ease;
 }
 
@@ -338,5 +338,101 @@ header .welcome {
     color: #636e72;
     line-height: 1.6;
 }
+.enemies1 { 
+    background: #cefce9;
+    background-image: url('picture/soward.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+    border-radius: 12px;
+    border-bottom: 4px solid #00ff88; 
+    transition: all 0.3s ease;
+}
+.enemies2 { 
+    background: #cefce9;
+    background-image: url('picture/fish.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+    border-radius: 12px;
+    border-bottom: 4px solid #00ff88; 
+    transition: all 0.3s ease;
+}.enemies3 { 
+    background: #cefce9;
+    background-image: url('picture/wheel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+    border-radius: 12px;
+    border-bottom: 4px solid #00ff88; 
+    transition: all 0.3s ease;
+}.enemies4 { 
+    background: #cefce9;
+    background-image: url('picture/change.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+    border-radius: 12px;
+    border-bottom: 4px solid #00ff88; 
+    transition: all 0.3s ease;
+}
+.enemies1:hover, .enemies2:hover, .enemies3:hover, .enemies4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: #cefce9;
+ 
+}
+.enemies1:hover p, .enemies2:hover p, .enemies3:hover p, .enemies4:hover p {
+    display: block;
+}
+.enemy h3
+    {
+        color: #1b4d3e;
+        margin-bottom: 10px;
+        font-size: 4rem;
+    }
+.enemy p {
+        font-size: 2em;
+        color: #426644;
+        line-height: 1.6;
+        display: none;
+       
+        
+}
+.enemy {
+    /* 1. 設定為全螢幕尺寸 */
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box; /* 確保 padding 不會撐破螢幕 */
 
+    /* 2. 使用 Grid 達成四角排列 */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 左右兩欄 */
+    grid-template-rows: 1fr 1fr;    /* 上下兩列 */
+    
+    /* 3. 對齊設定：讓內容貼向四角 */
+    /* 如果想讓內容完全貼死角落，可不設 padding 或設 justify-items */
+    padding: 40px; 
+    
+    /* 4. 原有的視覺樣式修改 */
+    background: rgba(110, 241, 189, 0.8);
+    transition: all 0.3s ease;
+    
+    /* 移除原本的 max-width 限制，否則無法全螢幕 */
+    max-width: none; 
+}
 
+/* 確保內部的四個子元素分別對齊四個角落 */
+.enemy > div:nth-child(1) { align-self: start; justify-self: start; } /* 左上 */
+.enemy > div:nth-child(2) { align-self: start; justify-self: end; }   /* 右上 */
+.enemy > div:nth-child(3) { align-self: end; justify-self: start; }   /* 左下 */
+.enemy > div:nth-child(4) { align-self: end; justify-self: end; }     /* 右下 */
+.topic {
+    font-size: 2em;
+    color: #1b4d3e;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 80px;
+  
+}
